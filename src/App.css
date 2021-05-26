@@ -56,7 +56,7 @@
   border-top: black 2px dashed;
   max-width: 300px;
   min-height: 25px;
-  padding-top: 7px;
+  padding-top: 2px;
   font-family: Georgia, "Times New Roman", Times, serif;
   font-weight: bold;
   text-align: center;
@@ -117,10 +117,32 @@ li {
   margin-top: 10px;
   font-size: 18px;
 }
-.form-div{
+.form-div {
   margin: auto;
   max-width: 400px;
   color: white;
   font-family: Georgia, "Times New Roman", Times, serif;
+  min-height: 300px;
+}
+.main-form {
+  margin: auto;
+  max-width: 250px;
+  min-height: 300px;
+}
+.form-input {
+  margin-left: 5px;
+}
+.button-div {
+  min-width: 250px;
+  margin-top: 10px;
+}
 
+.button {
+  left: 27%;
+  margin: auto;
+  position: relative;
+  background-color: #6061c8;
+  color: white;
+  min-width: 100px;
+  border-radius: 5px;
 }
