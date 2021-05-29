@@ -1,24 +1,17 @@
-import Reducer from "./reducer";
+import { useContext } from "react";
 import { useForm } from "react-hook-form";
-import { useContext, useReducer } from "react";
 import expenseContext from "./Context";
-const AddTransaction =()=>{
-    const { register, handleSubmit } = useForm({
-        mode: "all",
-      });
-    
-      let listData = useContext(expenseContext);
-      let [state, dispatch] = useReducer(Reducer, []);
-      const show = () => {
-        console.log(listData);
-      };
-      const submitt = (data) => {
-        dispatch(data);
-        listData = state;
-        show();
-      };
-    return(<div>
-        <div className="New-add">Add new transaction</div>
+const AddTransaction = () => {
+  let localData = useContext(expenseContext);
+  const { register, handleSubmit } = useForm({
+    mode: "all",
+  });
+  const submitt = (data) => {
+    localData[1](localData[0].concat(data));
+  };
+  return (
+    <div>
+      <div className="New-add">Add new transaction</div>
       <div className="form-div">
         <form onSubmit={handleSubmit(submitt)} className="main-form">
           <label>Enter Description</label>
@@ -50,7 +43,8 @@ const AddTransaction =()=>{
           </div>
         </form>
       </div>
-    </div>);
-}
+    </div>
+  );
+};
 
 export default AddTransaction;

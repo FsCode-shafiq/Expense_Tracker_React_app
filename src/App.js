@@ -1,10 +1,9 @@
 import "./App.css";
-import Child from './child/Child';
+import Child from "./child/Child";
 function App() {
-  
   return (
     <div className="App">
-      <Child/>
+      <Child />
     </div>
   );
 }

@@ -1,5 +1,5 @@
-import {createContext} from 'react';
+import { createContext } from "react";
 
-let expenseContext = createContext([]);
+let expenseContext = createContext({});
 
 export default expenseContext;
